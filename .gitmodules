@@ -1,0 +1,3 @@
+[submodule "ms-branch"]
+	path = ms-branch
+	url = https://github.com/khchimi-Othmen/OBP_STB_MS-Branch.git
