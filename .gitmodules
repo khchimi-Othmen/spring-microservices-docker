@@ -1,3 +1,3 @@
-[submodule "ms-branch"]
-	path = ms-branch
+[submodule "ms-bank_branch"]
+	path = ms-bank_branch
 	url = https://github.com/khchimi-Othmen/OBP_STB_MS-Branch.git
