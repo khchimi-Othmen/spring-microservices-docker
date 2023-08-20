@@ -1,0 +1,45 @@
+  eureka:
+    instance:
+      hostname: localhost
+    client:
+      service-url:
+        defaultZone: http://localhost:8761/eureka
+
+  server:
+    port: 8075
+    # servlet:
+    #   context-path: /Pi
+
+  ### DATABASE ###
+  spring:
+    datasource:
+      url: jdbc:mysql://localhost:3306/branch?createDatabaseIfNotExist=true
+      username: root
+      password:
+
+    ### JPA / HIBERNATE ###
+    jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: update
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQLDialect
+
+  # spring:
+  #   devtools:
+  #     add-properties: false
+
+  logging:
+    logback:
+      rollingpolicy:
+        max-file-size: 100KB
+    level:
+      root: info
+      # org.esprit.spring.service: FATAL
+    pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} - %-2level - %logger{60} - %d - %msg %n"
+      file: " %msg %n"
+    file:
+      name: "c:/logging/spring_file.log"
+
