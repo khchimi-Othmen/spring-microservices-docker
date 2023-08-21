@@ -26,4 +26,4 @@
       config:
         server:
           git:
-            uri: file:///C:/work/cloud-conf
+            uri: file:///C:/Users/4519L/Desktop/ms-lts/config/microservices-configs-central
