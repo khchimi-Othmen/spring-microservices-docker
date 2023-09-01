@@ -1,22 +1,3 @@
-#  server:
-#    port: 8888
-#
-#  spring:
-#    profiles:
-#      active: native
-#    application:
-#      name: config-server
-#      cloud:
-#        config:
-#         server:
-#           git:
-#             uri:
-#               file:///C:/work/cloud-conf
-#    cloud:
-#      config:
-#        server:
-#          search-locations:classpath:/configurations
-# application.yml
 
   server:
     port: 8888
@@ -26,4 +7,4 @@
       config:
         server:
           git:
-            uri: file:///C:/work/cloud-conf
+            uri: https://github.com/khchimi-Othmen/microservices-configs-central.git
