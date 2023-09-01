@@ -6,14 +6,14 @@ import org.springframework.stereotype.Component;
 import tn.stb.mstransaction.entities.ExchangeRateEventTransaction;
 import tn.stb.mstransaction.publishers.TranscionPublisher;
 
-import static tn.stb.mstransaction.config.MessagingConfig.QUEUE;
+import static tn.stb.mstransaction.config.MessagingConfig.EX_RATE_QUEUE;
 @Component
 public class TranscionConsumer {
 
     @Autowired
     private TranscionPublisher transcionPublisher;
 
-    @RabbitListener(queues = QUEUE)
+    @RabbitListener(queues = EX_RATE_QUEUE)
     public void consumeMessageFromQueue(ExchangeRateEventTransaction exchangeRateEventTransaction) {
         System.out.println("Message received from queue: " + exchangeRateEventTransaction);
 
