@@ -5,8 +5,7 @@ import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.amqp.support.converter.MessageConverter;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.*;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -18,42 +17,25 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MessagingConfig {
 
-    public static final String QUEUE = "first-ms-queue";
-    public static final String EXCHANGE = "first-ms-exchange";
-    public static final String ROUTING_KEY = "first-ms-routing-key";
-    ///////////
-    public static final String SECOND_QUEUE = "second-ms-queue";
-    public static final String SECOND_EXCHANGE = "second-ms-exchange";
-    public static final String SECOND_ROUTING_KEY = "second-ms-routing-key";
+    public static final String TRS_QUEUE_2 = "transaction-queue-fanout3-ms1";
+    public static final String TRS_EXCHANGE = "transaction-exchange_fanout3";
+
+
 
     @Bean
-    public Queue queue() {
-        return new Queue(QUEUE);
+    public Queue trsQueue2() {
+        return new Queue(TRS_QUEUE_2, true);
     }
 
     @Bean
-    public TopicExchange exchange() {
-        return new TopicExchange(EXCHANGE);
+    public FanoutExchange trsExchange() {
+        return new FanoutExchange(TRS_EXCHANGE);
     }
 
-    @Bean
-    public Binding binding(Queue queue, TopicExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY);
-    }
 
     @Bean
-    public Queue secondQueue() {
-        return new Queue(SECOND_QUEUE);
-    }
-
-    @Bean
-    public TopicExchange secondExchange() {
-        return new TopicExchange(SECOND_EXCHANGE);
-    }
-
-    @Bean
-    public Binding secondBinding(Queue secondQueue, TopicExchange secondExchange) {
-        return BindingBuilder.bind(secondQueue).to(secondExchange).with(SECOND_ROUTING_KEY);
+    public Binding trsBinding2(Queue trsQueue2, FanoutExchange trsExchange) {
+        return BindingBuilder.bind(trsQueue2).to(trsExchange);
     }
 
     @Bean
@@ -61,13 +43,11 @@ public class MessagingConfig {
         return new Jackson2JsonMessageConverter();
     }
 
+    @Primary
     @Bean
-    public AmqpTemplate template(ConnectionFactory connectionFactory) {
+    public AmqpTemplate amqpTemplate(ConnectionFactory connectionFactory) {
         final RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
         rabbitTemplate.setMessageConverter(converter());
         return rabbitTemplate;
     }
-
-
-
 }
