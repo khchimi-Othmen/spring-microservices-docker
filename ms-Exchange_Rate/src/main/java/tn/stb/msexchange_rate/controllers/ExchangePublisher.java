@@ -30,8 +30,8 @@ public class ExchangePublisher {
 
         try {
             // Fetch exchange rates from the API
-            ResponseEntity<tn.stb.msexchange_rate.dto.ExchangeRate[]> response = restTemplate.getForEntity(API_URL, tn.stb.msexchange_rate.dto.ExchangeRate[].class);
-            tn.stb.msexchange_rate.dto.ExchangeRate[] rates = response.getBody();
+            ResponseEntity<ExchangeRate[]> response = restTemplate.getForEntity(API_URL, ExchangeRate[].class);
+            ExchangeRate[] rates = response.getBody();
 
             if (rates != null && rates.length > 0) {
                 // Assuming the API response always contains the latest rate
@@ -55,4 +55,5 @@ public class ExchangePublisher {
             return "Exception occurred: " + e.getMessage();
         }
     }
+
 }
