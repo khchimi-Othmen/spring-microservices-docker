@@ -14,7 +14,7 @@ public class AverageRateConsumer {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    @RabbitListener(queues = MessagingConfig.SECOND_QUEUE)
+    @RabbitListener(queues = MessagingConfig.TRS_QUEUE_2)
     public void consumeMessageFromQueue(Double averageRate) {
         System.out.println("Message received from queue: " + averageRate);
 
