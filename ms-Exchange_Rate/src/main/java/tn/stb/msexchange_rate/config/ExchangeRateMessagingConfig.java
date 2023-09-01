@@ -16,25 +16,25 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class MessagingConfig {
+public class ExchangeRateMessagingConfig {
 
-    public static final String QUEUE = "first-ms-queue";
-    public static final String EXCHANGE = "first-ms-exchange";
-    public static final String ROUTING_KEY = "first-ms-routing-key";
+    public static final String EX_RATE_QUEUE = "ex-rate-queue";
+    public static final String EX_RATE_EXCHANGE = "ex-rate-exchange";
+    public static final String EX_RATE_ROUTING_KEY = "ex-rate-routing-key";
 
     @Bean
     public Queue queue() {
-        return new Queue(QUEUE);
+        return new Queue(EX_RATE_QUEUE);
     }
 
     @Bean
     public TopicExchange exchange() {
-        return new TopicExchange(EXCHANGE);
+        return new TopicExchange(EX_RATE_EXCHANGE);
     }
 
     @Bean
     public Binding binding(Queue queue, TopicExchange exchange) {
-        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY);
+        return BindingBuilder.bind(queue).to(exchange).with(EX_RATE_ROUTING_KEY);
     }
 
     @Bean
