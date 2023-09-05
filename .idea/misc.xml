@@ -8,10 +8,14 @@
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/discovery-server/pom.xml" />
         <option value="$PROJECT_DIR$/config-server/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-transaction_log/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-Transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-notification_uesr/pom.xml" />
+        <option value="$PROJECT_DIR$/ms-Exchange_Rate/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK" />
   <component name="ProjectType">
     <option name="id" value="jpab" />
   </component>

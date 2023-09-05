@@ -8,8 +8,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="config-server" />
+        <module name="ms-transaction_log" />
         <module name="discovery-server" />
         <module name="Branch" />
+        <module name="ms-Exchange_Rate" />
+        <module name="ms-Transaction" />
+        <module name="ms-notification_uesr" />
         <module name="gateway" />
       </profile>
     </annotationProcessing>
@@ -20,6 +24,10 @@
       <module name="config-server" options="-parameters" />
       <module name="discovery-server" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="ms-Exchange_Rate" options="-parameters" />
+      <module name="ms-Transaction" options="-parameters" />
+      <module name="ms-notification_uesr" options="-parameters" />
+      <module name="ms-transaction_log" options="-parameters" />
     </option>
   </component>
 </project>

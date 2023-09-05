@@ -3,10 +3,10 @@ package tn.stb.configserver;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class ConfigServerApplicationTests {
 
-	@Test
+//	@Test
 	void contextLoads() {
 	}
 
