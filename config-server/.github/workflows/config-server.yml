@@ -1,12 +1,3 @@
-gi#steps in workflow:
-#    Checkout code: This step checks out the code for your microservice from your GitHub repository.
-#    Setup JDK 17: This step sets up the Java Development Kit (JDK) version 17 on the runner machine. This is required because your microservice is developed in Java.
-#    Unit Tests: This step runs the unit tests for your microservice. This is important to ensure that your microservice is working as expected before you deploy it.
-#    Build the application: This step builds the JAR file for your microservice.
-#    Generate Docker Tag: This step generates a Docker tag for your microservice image. The tag is based on the current date and time.
-#    Build Docker Image: This step builds a Docker image for your microservice. The Docker image is tagged with the tag generated in the previous step.
-#    Login to Docker Hub: This step logs in to Docker Hub using your Docker Hub username and password.
-#    Push to Docker Hub: This step pushes the Docker image to Docker Hub.
 
     name: Build & Deploy Microservice Bank branches
     on:
