@@ -1,4 +1,4 @@
-#steps in workflow:
+gi#steps in workflow:
 #    Checkout code: This step checks out the code for your microservice from your GitHub repository.
 #    Setup JDK 17: This step sets up the Java Development Kit (JDK) version 17 on the runner machine. This is required because your microservice is developed in Java.
 #    Unit Tests: This step runs the unit tests for your microservice. This is important to ensure that your microservice is working as expected before you deploy it.
