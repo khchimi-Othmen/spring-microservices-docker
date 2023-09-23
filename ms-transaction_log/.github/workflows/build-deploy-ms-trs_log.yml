@@ -27,4 +27,3 @@
             mvn package
             # Add deployment steps for the Transaction Log microservice
 
-        # Add similar steps for other microservices as needed
