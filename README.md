@@ -1,6 +1,5 @@
 # Spring Microservices Docker Project
 
-![Build and Deploy](https://github.com/khchimi-Othmen/spring-microservices-docker/workflows/Build%20and%20Deploy/badge.svg)
 
 A Spring Boot microservices application built with Spring Boot, JDK 17, Docker, and other popular open-source technologies. This project aims to simplify the deployment and management of microservices using containerization and modern DevOps practices.
 
