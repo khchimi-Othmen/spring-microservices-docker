@@ -2,6 +2,7 @@
 
 
 A Spring Boot microservices application built with Spring Boot, JDK 17, Docker, and other popular open-source technologies. This project aims to simplify the deployment and management of microservices using containerization and modern DevOps practices.
+
 ![azerty drawio (1)](https://github.com/khchimi-Othmen/spring-microservices-docker/assets/80161433/d5639fc4-64ca-49a9-bd46-c7924bf6fa48)
 
 ## Features
@@ -35,6 +36,3 @@ We welcome contributions to make the Spring Microservices Docker Project even be
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it according to the terms of the license.
 
----
-
-*Note: Replace `[Deployment Tool/Platform]` with the actual deployment tool/platform you use.*
