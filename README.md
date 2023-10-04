@@ -22,8 +22,6 @@ We have implemented a robust CI/CD pipeline to automate the build and deployment
 
 - **Docker Image**: The Docker image is tagged and pushed to our Docker registry for easy deployment.
 
-- **Deployment**: We use [Deployment Tool/Platform] to manage our containers in production. Our deployment process is fully automated, ensuring consistent and reliable releases.
-
 - **Testing**: Our CI/CD pipeline includes comprehensive testing to maintain code quality and prevent regressions.
 
 - **Monitoring**: We have set up monitoring and alerting to ensure the health and performance of our microservices in production.
