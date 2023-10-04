@@ -2,8 +2,8 @@
 
 
 A Spring Boot microservices application built with Spring Boot, JDK 17, Docker, and other popular open-source technologies. This project aims to simplify the deployment and management of microservices using containerization and modern DevOps practices.
+![24 drawio](https://github.com/khchimi-Othmen/spring-microservices-docker/assets/80161433/beaa8621-547f-44fc-afad-12986dadcbc0)
 
-![azerty drawio (1)](https://github.com/khchimi-Othmen/spring-microservices-docker/assets/80161433/d5639fc4-64ca-49a9-bd46-c7924bf6fa48)
 
 ## Features
 
